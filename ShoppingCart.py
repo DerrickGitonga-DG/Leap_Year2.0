@@ -4,15 +4,14 @@ class Person:
     pass
 
 class Animal:
-        ...
+    ...
 
 class Classey:
     varia = 2
-
     def method(self):
         print(self.varia)
 
-object_one = Classey() #object instance
+object_one = Classey()
 object_two = Classey()
 object_one.varia = 3
 object_two.varia = 5
@@ -20,7 +19,7 @@ print(object_one.varia)
 print(object_two.varia)
 
 class Transport:
-    def init(self, air, water):  #methods
+    def __init__(self, air, water):
         self.air = air
         self.water = water
 
@@ -30,7 +29,7 @@ print(obj_transport.air, obj_transport.water)
 print(obj2.air, obj2.water)
 
 class Person:
-    def init(self, fname, lname):
+    def __init__(self, fname, lname):
         self.fname = fname
         self.lname = lname
 
@@ -42,9 +41,8 @@ y = Person("Dake","Bouy")
 x.printname()
 y.printname()
 
-
 class ShoppingCart:
-    def init(self):
+    def __init__(self):
         self.items = []
 
     def add_item(self, item_name, qty):
@@ -57,7 +55,6 @@ class ShoppingCart:
                 self.items.remove(item)
                 break
 
-# Calculates total number of items in my cart
     def calculate_Total(self):
         total = 0
         for item in self.items:
